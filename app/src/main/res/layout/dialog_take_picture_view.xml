@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/dialog_wheel_bg"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tv_take_picture"
+            android:padding="@dimen/dimen_20px"
+            android:text="拍照"
+            android:gravity="center"
+            style="@style/text_36_2c"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include layout="@layout/line_view"/>
+
+        <TextView
+            android:id="@+id/tv_pick_picture"
+            android:padding="@dimen/dimen_20px"
+            android:text="@string/pick_picture"
+            android:gravity="center"
+            style="@style/text_36_2c"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:padding="@dimen/dimen_20px"
+        android:text="@string/cancel"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dimen_20px"
+        android:layout_marginBottom="@dimen/dimen_20px"
+        android:background="@drawable/dialog_wheel_bg"
+        style="@style/text_36_2c"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
