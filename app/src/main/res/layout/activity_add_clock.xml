@@ -1,0 +1,303 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <com.lengjiye.clock.view.ActionBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/action_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/action_bar"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_layout"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20px"
+                layout="@layout/line_view" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/dimen_20px"
+                android:paddingRight="@dimen/dimen_20px"
+                android:layout_height="@dimen/dimen_88px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    style="@style/text_34_2c"
+                    android:text="主题：" />
+
+                <EditText
+                    android:id="@+id/et_tittle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_88px"
+                    android:maxLength="30"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    style="@style/text_30_2c"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textColorHint="@color/hint_color"
+                    android:textCursorDrawable="@drawable/cursor_blue"
+                    android:hint="默认闹钟"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toRightOf="@+id/tv_tittle"
+                    android:layout_toEndOf="@+id/tv_tittle" />
+            </RelativeLayout>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/line_view" />
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20px"
+                layout="@layout/line_view" />
+
+            <RelativeLayout
+                android:id="@+id/rl_setting_time"
+                android:paddingLeft="@dimen/dimen_20px"
+                android:paddingRight="@dimen/dimen_20px"
+                android:layout_height="@dimen/dimen_88px"
+                android:layout_width="match_parent"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    style="@style/text_34_2c"
+                    android:text="时间：" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_setting_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/text_30_2c"
+                        android:text="08:00" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_10px"
+                        android:src="@drawable/order_details_arrow" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/line_view" />
+
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20px"
+                layout="@layout/line_view" />
+
+            <RelativeLayout
+                android:id="@+id/rl_repeat_time"
+                android:paddingLeft="@dimen/dimen_20px"
+                android:paddingRight="@dimen/dimen_20px"
+                android:layout_height="@dimen/dimen_88px"
+                android:layout_width="match_parent"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    style="@style/text_34_2c"
+                    android:text="重复提醒：" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_repeat_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/text_30_2c"
+                        android:text="每天" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_10px"
+                        android:src="@drawable/order_details_arrow" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/line_view" />
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20px"
+                layout="@layout/line_view" />
+
+            <RelativeLayout
+                android:id="@+id/rl_ring"
+                android:paddingLeft="@dimen/dimen_20px"
+                android:paddingRight="@dimen/dimen_20px"
+                android:layout_height="@dimen/dimen_88px"
+                android:layout_width="match_parent"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    style="@style/text_34_2c"
+                    android:text="铃声：" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_ring"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="被伤过的人还可以爱谁"
+                        style="@style/text_30_2c" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_10px"
+                        android:src="@drawable/order_details_arrow" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/line_view" />
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20px"
+                layout="@layout/line_view" />
+
+            <RelativeLayout
+                android:id="@+id/rl_shake"
+                android:paddingLeft="@dimen/dimen_20px"
+                android:paddingRight="@dimen/dimen_20px"
+                android:layout_height="@dimen/dimen_88px"
+                android:layout_width="match_parent"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    style="@style/text_34_2c"
+                    android:text="震动：" />
+
+                <com.lengjiye.clock.view.CheckSwitchButton
+                    android:id="@+id/csb_shake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:focusable="false"
+                    android:enabled="true"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/line_view" />
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20px"
+                layout="@layout/line_view" />
+
+            <RelativeLayout
+                android:id="@+id/rl_image"
+                android:paddingLeft="@dimen/dimen_20px"
+                android:paddingRight="@dimen/dimen_20px"
+                android:layout_height="@dimen/dimen_88px"
+                android:layout_width="match_parent"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    style="@style/text_34_2c"
+                    android:text="背景图片：" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_launcher"
+                        android:id="@+id/iv_image" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_10px"
+                        android:src="@drawable/order_details_arrow" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/line_view" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

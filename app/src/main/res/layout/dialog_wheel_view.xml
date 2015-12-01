@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_wheel_bg"
+        android:padding="@dimen/dimen_34px"
+        android:layout_gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <com.lengjiye.clock.view.wheelview.WheelView
+                android:id="@+id/wv_hour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <com.lengjiye.clock.view.wheelview.WheelView
+                android:id="@+id/wv_minute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/dialog_wheel_bg"
+        android:layout_marginTop="@dimen/dimen_20px"
+        android:padding="@dimen/dimen_20px"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_cancel_red"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dimen_10px"
+            android:text="@string/cancel" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="0dp"
+            android:background="@drawable/btn_confirm_blue"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/dimen_10px"
+            android:text="@string/confirm" />
+    </LinearLayout>
+</LinearLayout>

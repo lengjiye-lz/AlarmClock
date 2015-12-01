@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.lengjiye.clock.view.ActionBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/action_bar" />
+
+    <ListView
+        android:id="@+id/lv_clock_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:descendantFocusability="blocksDescendants"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent"
+        android:focusable="false"
+        android:scrollbars="none"
+        android:layout_below="@+id/action_bar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_delete_layout"
+        android:layout_width="match_parent"
+        android:paddingLeft="@dimen/dimen_20px"
+        android:paddingRight="@dimen/dimen_20px"
+        android:paddingTop="@dimen/dimen_10px"
+        android:paddingBottom="@dimen/dimen_10px"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:id="@+id/rl_check_all"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/iv_check_all"
+                android:src="@drawable/select_checkbox_normal"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全选"
+                style="@style/text_32_2c"
+                android:layout_marginLeft="@dimen/dimen_20px"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_check_all" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="@dimen/dimen_200px"
+            android:layout_height="@dimen/dimen_88px"
+            android:text="删除"
+            style="@style/text_30_white"
+            android:background="@drawable/btn_cancel_red"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+</RelativeLayout>
